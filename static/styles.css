@@ -1,0 +1,71 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 3px 3px 4px #000000;
+    color: #fff;
+}
+
+.section h1 {
+    font-size: 1.5em;
+}
+
+.section h2 {
+    font-size: 1em;
+}
+
+.section h1, .section h2, .section h3 {
+    margin: 0;
+    padding: 0;
+
+    text-shadow: 5px 5px 8px #000000;
+}
+
+#fp-nav ul span {
+    background-color: white!important;
+}
+
+#section1 {
+    
+}
+
+#section1 .fp-bg {
+    background-image: url('images/NPM-2156-min.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-color: #555!important;
+    background-blend-mode: overlay;
+}
+
+#section2 .fp-bg {
+    background-image: url('images/NPM-1571-min.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-color: #333!important;
+    background-blend-mode: overlay;
+}
+
+#section3 .fp-bg {
+    background-image: url('images/NPM-2146-min.jpg');
+    background-size: cover;
+    background-position: center 50%;
+    background-color: #333!important;
+    background-blend-mode: overlay;
+}
+
+@media screen and (max-width:720px) {
+    .section h1 {
+        font-size: .7em;
+    }
+
+    .section h2 {
+        font-size: .5em;
+    }
+
+    #section3 .fp-bg {
+        background-position: center 100%;
+    }
+}
