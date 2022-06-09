@@ -12,7 +12,6 @@ const Hooks = () => {
 
     const
         onLeave = (origin, destination, direction) => {
-            console.log({origin, destination, direction});
             let bg = destination.item.querySelector('.fp-bg');
             bg.style.transform = 'translateX(0px) translateY(0px)';
             bg.classList.remove('fp-notransition');

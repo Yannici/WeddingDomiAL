@@ -54,7 +54,7 @@ body{
 }
 
 #section1 .fp-bg {
-    background-image: url('images/NPM-2156-min.jpg');
+    background-image: url('images/NPM-2156-min.webp');
     background-size: cover;
     background-position: center 20%;
     background-color: #555!important;
@@ -62,7 +62,7 @@ body{
 }
 
 #section2 .fp-bg {
-    background-image: url('images/NPM-1571-min.jpg');
+    background-image: url('images/NPM-1571-min.webp');
     background-size: cover;
     background-position: center 20%;
     background-color: #333!important;
@@ -70,7 +70,7 @@ body{
 }
 
 #section3 .fp-bg {
-    background-image: url('images/NPM-2146-min.jpg');
+    background-image: url('images/NPM-2146-min.webp');
     background-size: cover;
     background-position: center 50%;
     background-color: #333!important;
