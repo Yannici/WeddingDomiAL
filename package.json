@@ -1,8 +1,8 @@
 {
-  "name": "react-fullpage-next-example",
+  "name": "wedding-domi-al",
   "version": "1.0.0",
   "description": "",
-  "main": "hooks.js",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",

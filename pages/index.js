@@ -1,19 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Head from 'next/head'
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
 const pluginWrapper = () => {
-    require('../static/fullpage.parallax.min.js');
+    //require('../static/fullpage.parallax.min.js');
 };
 
 const Hooks = () => {
+    const [init, setInit] = useState(false);
+
     const
         onLeave = (origin, destination, direction) => {
-            console.log("onLeave", { origin, destination, direction });
-            // arguments are mapped in order of fullpage.js callback arguments do something
-            // with the event
+            console.log({origin, destination, direction});
+            let bg = destination.item.querySelector('.fp-bg');
+            bg.style.transform = 'translateX(0px) translateY(0px)';
+            bg.classList.remove('fp-notransition');
+
+            if (!origin.isFirst && direction === 'up') {
+                let translateY = window.innerHeight*0.65*-1;
+                let bgOrigin = origin.item.querySelector('.fp-bg');
+                bgOrigin.style.transform = 'translateX(0px) translateY(' + translateY.toFixed(0) + 'px)';
+            }
         };
+
+    useEffect(() => {
+        if (!init) {
+            var sections = document.querySelectorAll('.section');
+        
+            for (let i = 0; i <= sections.length-1; i++) {
+                let bg = sections[i].querySelector('.fp-bg');
+                
+                if (i > 0) {
+                    let translateY = window.innerHeight*0.65*-1;
+                    bg.style.transform = 'translateX(0px) translateY(' + translateY.toFixed(0) + 'px)';
+                    bg.classList.add('fp-notransition');
+                }
+            }
+
+            setInit(true);
+        }
+    }, [init, setInit])
 
     return (
         <div className="App">
@@ -30,10 +57,9 @@ const Hooks = () => {
                 navi
                 pluginWrapper={pluginWrapper}
                 onLeave={onLeave}
-                parallax
                 css3
                 render={() =>
-                    console.log("render prop change") || (
+                    (
                         <ReactFullpage.Wrapper>
                             <div key="section1" id="section1" className="section">
                                 <div className="fp-bg"></div>

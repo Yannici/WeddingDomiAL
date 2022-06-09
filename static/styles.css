@@ -2,6 +2,27 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.fp-bg {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.fp-bg {
+    transition: transform 700ms ease;
+}
+
+.fp-section, .fp-slide, .fp-section.fp-table, .fp-slide.fp-table, .fp-section .fp-tableCell, .fp-slide .fp-tableCell {
+    position: relative;
+    overflow: hidden;
+}
+
+.fp-slide, .fp-section {
+    transition: background-position 700ms ease;
+}
+
 .section {
     text-align: center;
     font-size: 4em;
