@@ -45,6 +45,7 @@ const Hooks = () => {
         <div className="App">
             <Head>
                 <title>Dominik & Anna-Lena - Unsere Hochzeitseinladung</title>
+                <meta name="robots" content="noindex"></meta>
                 <link rel="icon" href="/static/icon.ico" type="image/x-icon" />
                 <link href="/static/styles.css" rel="stylesheet" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
