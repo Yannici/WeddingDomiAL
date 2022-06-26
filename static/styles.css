@@ -1,4 +1,4 @@
-body{
+html, body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -23,53 +23,47 @@ body{
     transition: background-position 700ms ease;
 }
 
-.section {
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section li {
     text-align: center;
     font-size: 4em;
     text-shadow: 3px 3px 4px #000000;
     color: #fff;
+
+    margin: 0;
+    padding: 0;
+    
+    text-shadow: 5px 5px 8px #000000;
 }
 
 .section h1 {
-    font-size: 1.5em;
+    font-size: 12em;
 }
 
 .section h2 {
-    font-size: 1em;
+    font-size: 4em;
 }
 
-.section h1, .section h2, .section h3 {
-    margin: 0;
-    padding: 0;
+.section h1 {
+    font-family: 'Allison', 'sans-serif';
+}
 
-    text-shadow: 5px 5px 8px #000000;
+#section3 h2 {
+    font-size: .5em;
 }
 
 #fp-nav ul span {
     background-color: white!important;
 }
 
-#section1 {
-    
-}
-
-#section1 .fp-bg {
+#section4 .fp-bg {
     background-image: url('images/NPM-2156-min.webp');
     background-size: cover;
-    background-position: center 20%;
+    background-position: center 10%;
     background-color: #555!important;
     background-blend-mode: overlay;
 }
 
 #section2 .fp-bg {
-    background-image: url('images/NPM-1571-min.webp');
-    background-size: cover;
-    background-position: center 20%;
-    background-color: #333!important;
-    background-blend-mode: overlay;
-}
-
-#section3 .fp-bg {
     background-image: url('images/NPM-2146-min.webp');
     background-size: cover;
     background-position: center 50%;
@@ -77,16 +71,117 @@ body{
     background-blend-mode: overlay;
 }
 
-@media screen and (max-width:720px) {
+#section3 .fp-bg {
+    background-image: url('images/NPM-1571-min.webp');
+    background-size: cover;
+    background-position: center 20%;
+    background-color: #333!important;
+    background-blend-mode: overlay;
+}
+
+#section1 .fp-bg {
+    background-image: url('images/NPM-1378-min.webp');
+    background-size: cover;
+    background-position: center 35%;
+    background-color: #333!important;
+    background-blend-mode: overlay;
+}
+
+ul {
+    padding: 0;
+    margin-top: 2em;
+}
+
+ul li:first-child {
+    font-size: 2em;
+}
+
+img.tt-icon {
+    height: 80px;
+}
+
+.col p {
+    padding: 0;
+    margin: 0;
+
+    font-size: 2em;
+    text-shadow: 3px 3px 4px #000000;
+    color: #fff;
+
+}
+
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 3px 3px 4px #000000;
+    color: #fff;
+}
+
+.form-check-input[type=radio] {
+    font-size: 2em;
+}
+
+@media screen and (max-width:980px) {
+
+    img.tt-icon {
+        height: 60px;
+    }
+
+    .section li {
+        font-size: 2.5em;
+    }
+
+    ul li:first-child {
+        font-size: 2em;
+    }
+
+    .col p {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width:767px) {
     .section h1 {
-        font-size: .7em;
+        font-size: 8em;
     }
 
     .section h2 {
-        font-size: .5em;
+        font-size: 2em;
     }
 
     #section3 .fp-bg {
         background-position: center 100%;
+    }
+
+    ul {
+        padding: 0;
+        margin-top: 3em;
+    }
+
+    .section li {
+        font-size: 2em;
+    }
+
+    ul li:first-child {
+        font-size: 1.5em;
+    }
+
+    img.tt-icon {
+        height: 40px;
+    }
+
+    .col p {
+        font-size: 1.2em;
+    }
+
+    form {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
