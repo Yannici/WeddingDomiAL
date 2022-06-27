@@ -30,7 +30,7 @@ const Hooks = () => {
     const onSendAttend = (e) => {
         e.preventDefault();
 
-        axios.post(process.env.API_ENDPOINT + "/savereg", formData)
+        axios.post("https://domialapi.waproks.de/savereg", formData)
         .then(res => {
             let color = (res.data.success) ? 'success' : 'danger';
             setAlert({ color, visible: true, message: res.data.message });
